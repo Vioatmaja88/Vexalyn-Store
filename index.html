@@ -3,7 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VEXALYN STORE - Hosting Pterodactyl Premium</title>
+    
+    <!-- SEO META TAGS -->
+    <title>VEXALYN STORE - Hosting Pterodactyl Premium & Murah Indonesia</title>
+    <meta name="description" content="Vexalyn Store menyediakan hosting Pterodactyl Premium murah dan anti lag. Paket mulai Rp 1.000 dengan RAM hingga Unlimited. Support 24/7 dan setup instan.">
+    <meta name="keywords" content="hosting pterodactyl murah, hosting minecraft indonesia, hosting fivem, vps gaming, panel pterodactyl premium, sewa server game">
+    <meta name="author" content="Vexalyn Store">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vexalynstore.com/">
+    <meta property="og:title" content="Vexalyn Store - Hosting Pterodactyl Premium">
+    <meta property="og:description" content="Hosting game server Pterodactyl termurah dan terbaik di Indonesia. Mulai Rp 1.000/bulan.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://vexalynstore.com/">
+    <meta property="twitter:title" content="Vexalyn Store - Hosting Pterodactyl Premium">
+    <meta property="twitter:description" content="Hosting game server Pterodactyl termurah dan terbaik di Indonesia.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <meta name="theme-color" content="#6366f1">
@@ -122,21 +143,6 @@
             box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
         }
 
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: 0.5s;
-        }
-
-        .btn-primary:hover::before {
-            left: 100%;
-        }
-
         .btn-primary:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(99, 102, 241, 0.6);
@@ -231,7 +237,7 @@
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
-            overflow-y: auto; /* Added scroll for sidebar */
+            overflow-y: auto;
         }
 
         .sidebar.active {
@@ -298,7 +304,7 @@
         /* --- MAIN CONTENT --- */
         main {
             padding-top: 80px;
-            max-width: 1400px; /* Sedikit lebih lebar untuk menampung banyak kartu */
+            max-width: 1400px;
             margin: 0 auto;
             padding-left: 20px;
             padding-right: 20px;
@@ -437,6 +443,27 @@
             font-family: var(--font-heading);
         }
 
+        /* --- PANEL SHOWCASE --- */
+        .panel-mockup-container {
+            margin-top: 3rem;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+        
+        .panel-mockup {
+            width: 100%;
+            display: block;
+            border-radius: 20px;
+            transition: transform 0.5s ease;
+        }
+
+        .panel-mockup:hover {
+            transform: scale(1.02);
+        }
+
         /* --- PRICING --- */
         .section-header {
             text-align: center;
@@ -451,7 +478,7 @@
 
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); /* Menyesuaikan agar pas 11 item */
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
             gap: 1.5rem;
             justify-content: center;
         }
@@ -588,6 +615,23 @@
             color: var(--accent);
         }
 
+        .payment-actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .btn-qris {
+            background: white;
+            color: #000;
+            justify-content: center;
+            font-weight: 700;
+        }
+        
+        .btn-qris:hover {
+            background: #e2e8f0;
+        }
+
         /* --- FAQ --- */
         .faq-item {
             border-bottom: 1px solid var(--glass-border);
@@ -628,6 +672,69 @@
         .faq-item.active .faq-toggle-icon {
             transform: rotate(45deg);
             color: var(--primary);
+        }
+
+        /* --- TESTIMONIALS (DI PINDAH KE BAWAH) --- */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            padding: 2rem;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .quote-icon {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 3rem;
+            color: rgba(255, 255, 255, 0.05);
+            font-family: serif;
+        }
+
+        .rating {
+            color: #fbbf24;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-text {
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .user-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            font-size: 1.1rem;
+        }
+
+        .user-details h4 {
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .user-details span {
+            font-size: 0.8rem;
+            color: var(--text-muted);
         }
 
         /* --- FOOTER --- */
@@ -711,12 +818,13 @@
 
         .modal-content {
             width: 90%;
-            max-width: 500px;
+            max-width: 450px;
             border-radius: 24px;
             padding: 2rem;
             transform: scale(0.9);
             transition: 0.3s;
             position: relative;
+            text-align: center;
         }
 
         .modal.active .modal-content {
@@ -732,6 +840,39 @@
             color: var(--text-muted);
             font-size: 1.5rem;
             cursor: pointer;
+        }
+
+        /* QRIS Specific Style */
+        .qris-code {
+            background: white;
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+            width: 200px;
+            height: 200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .qris-code img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .chat-admin-btn {
+            background: var(--secondary);
+            color: white;
+            width: 100%;
+            justify-content: center;
+            margin-top: 1rem;
+            animation: pulse-green 2s infinite;
+        }
+        
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(236, 72, 153, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(236, 72, 153, 0); }
         }
 
         /* --- CHAT WIDGET --- */
@@ -773,6 +914,9 @@
             .pricing-card.featured:hover {
                 transform: translateY(-5px);
             }
+            .payment-actions {
+                grid-template-columns: 1fr;
+            }
             main {
                 padding-left: 15px;
                 padding-right: 15px;
@@ -792,6 +936,9 @@
             <i class="fas fa-rocket"></i> VEXALYN STORE
         </a>
         <div class="header-actions">
+            <button id="installBtn" class="btn btn-primary" style="display: none; font-size: 0.8rem; padding: 0.5rem 1rem;">
+                <i class="fas fa-download"></i> Install App
+            </button>
             <button class="menu-btn" id="menuToggle">
                 <i class="fas fa-bars"></i>
             </button>
@@ -876,6 +1023,15 @@
                     <p style="color: var(--text-muted);">Tim teknis kami siap membantu kendala teknis kapan saja melalui WhatsApp.</p>
                 </div>
             </div>
+
+            <!-- Panel Showcase -->
+            <div class="panel-mockup-container glass">
+                <img src="https://i.ibb.co.com/27nVrFHs/209240583-65297556-171d-46a6-878d-c71d8d3e7c3d.png" alt="Tampilan Panel Pterodactyl" class="panel-mockup">
+                <div style="position: absolute; bottom: 0; left: 0; width: 100%; padding: 2rem; background: linear-gradient(to top, rgba(3,7,18,0.9), transparent); text-align: center;">
+                    <h3 style="color: white; margin-bottom: 0.5rem;">Dashboard Pterodactyl Modern</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Kelola file, database, dan console server Anda dengan antarmuka yang intuitif.</p>
+                </div>
+            </div>
         </section>
 
         <!-- Pricing Section -->
@@ -894,7 +1050,7 @@
             <div class="glass order-container">
                 <div style="text-align: center; margin-bottom: 2rem;">
                     <h2 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 0.5rem;">Formulir Pemesanan</h2>
-                    <p style="color: var(--text-muted);">Lengkapi data di bawah ini, kami akan proses via WhatsApp.</p>
+                    <p style="color: var(--text-muted);">Pilih paket dan metode pembayaran di bawah ini.</p>
                 </div>
 
                 <div class="form-group">
@@ -923,9 +1079,16 @@
                     </div>
                 </div>
 
-                <button class="btn btn-primary" id="waOrderBtn" style="width: 100%; justify-content: center; padding: 1rem;">
-                    <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i> Pesan Sekarang via WhatsApp
-                </button>
+                <!-- Tombol Pembayaran (DIPERBARUI) -->
+                <div class="payment-actions">
+                    <button class="btn btn-primary" id="waOrderBtn" style="width: 100%; justify-content: center;">
+                        <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i> Pesan via WhatsApp
+                    </button>
+                    <!-- Tombol QRIS Baru -->
+                    <button class="btn btn-qris" id="qrisBtn" onclick="openQrisModal()">
+                        <i class="fas fa-qrcode"></i> Bayar via QRIS
+                    </button>
+                </div>
             </div>
         </section>
 
@@ -960,16 +1123,64 @@
                             <i class="fas fa-plus faq-toggle-icon"></i>
                         </button>
                         <div class="faq-answer">
-                            <p>Kami menerima Transfer Bank (BCA/Mandiri), E-Wallet (Dana, OVO, Gopay), dan QRIS untuk kemudahan transaksi.</p>
+                            <p>Kami menerima Transfer Bank (BCA/Mandiri), E-Wallet (Dana, OVO, Gopay), QRIS, dan Alfamart/Indomaret.</p>
                         </div>
                     </div>
-                    <div class="faq-item">
-                        <button class="faq-question">
-                            Apakah ada garansi uang kembali?
-                            <i class="fas fa-plus faq-toggle-icon"></i>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Kami memberikan garansi uang kembali 7 hari jika server mengalami downtime yang tidak wajar dan tidak bisa kami perbaiki.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section (DIPINDAH KE BAWAH FAQ) -->
+        <section id="testimonials">
+            <div class="section-header">
+                <h2 class="gradient-text">Apa Kata Mereka?</h2>
+                <p style="color: var(--text-muted);">Ulasan jujur dari pelanggan yang telah menggunakan layanan kami.</p>
+            </div>
+            <div class="testimonial-grid">
+                <!-- Review 1 -->
+                <div class="glass testimonial-card">
+                    <div class="quote-icon">“</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Hostingnya ngebut banget, buka main Minecraft rame-rame sama temen nggak lag sama sekali. Admin juga fast respon!"</p>
+                    <div class="user-info">
+                        <div class="user-avatar" style="background: var(--primary);">R</div>
+                        <div class="user-details">
+                            <h4>Rian Gamer</h4>
+                            <span>Minecraft Server Owner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="glass testimonial-card">
+                    <div class="quote-icon">“</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">"Paket Unlimitednya worth it banget buat harga segini. Panel Pterodactylnya juga gampang dipakai buat orang awam."</p>
+                    <div class="user-info">
+                        <div class="user-avatar" style="background: var(--secondary);">D</div>
+                        <div class="user-details">
+                            <h4>Dimas Roleplay</h4>
+                            <span>FiveM Developer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="glass testimonial-card">
+                    <div class="quote-icon">“</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Setup cepet, cuma 5 menit server udah jadi. Supportnya sangat membantu saat saya bingung konfigurasi port."</p>
+                    <div class="user-info">
+                        <div class="user-avatar" style="background: var(--accent);">S</div>
+                        <div class="user-details">
+                            <h4>Siti Survival</h4>
+                            <span>Rust Player</span>
                         </div>
                     </div>
                 </div>
@@ -1013,7 +1224,7 @@
         </div>
     </footer>
 
-    <!-- Payment Modal -->
+    <!-- Payment Modal (Umum) -->
     <div class="modal" id="paymentModal">
         <div class="glass modal-content">
             <button class="modal-close" onclick="document.getElementById('paymentModal').classList.remove('active')">&times;</button>
@@ -1025,7 +1236,7 @@
                 </div>
                 <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 12px;">
                     <i class="fas fa-wallet" style="font-size: 2rem; color: var(--secondary); margin-bottom: 0.5rem;"></i>
-                    <div style="font-weight: 600;">E-Wallet (Dana/OVO/Gopay)</div>
+                    <div style="font-weight: 600;">E-Wallet</div>
                 </div>
                 <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 12px;">
                     <i class="fas fa-university" style="font-size: 2rem; color: var(--accent); margin-bottom: 0.5rem;"></i>
@@ -1033,10 +1244,32 @@
                 </div>
                 <div style="background: rgba(255,255,255,0.05); padding: 1rem; border-radius: 12px;">
                     <i class="fas fa-store" style="font-size: 2rem; color: #fbbf24; margin-bottom: 0.5rem;"></i>
-                    <div style="font-weight: 600;">Alfamart/Indomaret</div>
+                    <div style="font-weight: 600;">Minimarket</div>
                 </div>
             </div>
-            <p style="text-align: center; margin-top: 1.5rem; color: var(--text-muted); font-size: 0.9rem;">Instruksi pembayaran akan dikirimkan setelah Anda melakukan pesanan.</p>
+        </div>
+    </div>
+
+    <!-- QRIS Modal (BARU) -->
+    <div class="modal" id="qrisModal">
+        <div class="glass modal-content">
+            <button class="modal-close" onclick="document.getElementById('qrisModal').classList.remove('active')">&times;</button>
+            <h3 style="text-align: center; margin-bottom: 0.5rem; font-family: var(--font-heading);">Scan QRIS</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Total: <span id="qrisPriceDisplay" style="color: var(--accent); font-weight: bold;">Rp 0</span></p>
+            
+            <div class="qris-code">
+                <!-- Placeholder QR Code Image -->
+                <img src="https://i.ibb.co.com/Wv09fb4Q/IMG-20260125-WA0049.jpg" alt="QR Code">
+            </div>
+            
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                Scan kode di atas menggunakan aplikasi e-wallet (Dana, GoPay, OVO, ShopeePay, Mobile Banking).
+            </p>
+
+            <!-- Tombol Chat Admin Setelah Bayar -->
+            <button class="btn chat-admin-btn" onclick="chatAdminAfterQris()">
+                <i class="fab fa-whatsapp"></i> Sudah Bayar? Chat Admin Sekarang
+            </button>
         </div>
     </div>
 
@@ -1048,7 +1281,7 @@
     </div>
 
     <script>
-        // --- DATA PAKET BARU SESUAI REQUEST ---
+        // --- DATA PAKET ---
         const plans = [
             { id: 1, name: "Paket 1GB", ram: "1 GB", disk: "1 GB", cpu: "40%", price: "1.000", period: "", featured: false },
             { id: 2, name: "Paket 2GB", ram: "2 GB", disk: "1 GB", cpu: "60%", price: "2.000", period: "", featured: false },
@@ -1072,14 +1305,16 @@
         const pricingGrid = document.getElementById('pricingGrid');
         const packageSelect = document.getElementById('packageSelect');
         const waOrderBtn = document.getElementById('waOrderBtn');
+        const qrisBtn = document.getElementById('qrisBtn');
         
         // --- INIT ---
         document.addEventListener('DOMContentLoaded', () => {
             renderPricing();
             populateSelect();
-            updateSummary(0); // Default select first
+            updateSummary(0);
             initSlider();
             initScrollAnimations();
+            initPWA();
         });
 
         // --- RENDER PRICING CARDS ---
@@ -1106,7 +1341,6 @@
                     </button>
                 `;
                 
-                // Add 3D Tilt Effect logic
                 card.addEventListener('mousemove', handleTilt);
                 card.addEventListener('mouseleave', resetTilt);
                 
@@ -1120,13 +1354,10 @@
             const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
-            
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
-            
-            const rotateX = ((y - centerY) / centerY) * -5; // Max rotation deg
+            const rotateX = ((y - centerY) / centerY) * -5; 
             const rotateY = ((x - centerX) / centerX) * 5;
-
             card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
         }
 
@@ -1159,28 +1390,54 @@
             document.getElementById('summaryRam').textContent = plan.ram;
             document.getElementById('summaryDisk').textContent = plan.disk;
             document.getElementById('summaryPrice').textContent = "Rp " + plan.price;
+            // Update tombol QRIS agar dinamis
+            qrisBtn.setAttribute('onclick', `openQrisModal(${index})`);
         }
 
         packageSelect.addEventListener('change', (e) => {
             updateSummary(e.target.value);
         });
 
-        // --- WHATSAPP ORDER ---
+        // --- WHATSAPP ORDER (STANDARD) ---
         waOrderBtn.addEventListener('click', () => {
             const index = packageSelect.value;
             const plan = plans[index];
+            const message = `Halo Admin VEXALYN STORE, saya ingin memesan server.\n\n*Paket:* ${plan.name}\n*Spesifikasi:* RAM ${plan.ram} | Disk ${plan.disk} | CPU ${plan.cpu}\n*Harga:* Rp ${plan.price}\n\nMohon info pembayaran. Terima kasih.`;
+            const encoded = encodeURIComponent(message);
+            const url = `https://wa.me/6283898980808?text=${encoded}`;
+            window.open(url, '_blank');
+        });
+
+        // --- QRIS LOGIC (BARU) ---
+        function openQrisModal(index) {
+            // Jika index tidak dikirim dari onclick inline, ambil dari select
+            if (index === undefined) {
+                index = packageSelect.value;
+            }
+            const plan = plans[index];
             
-            const message = `Halo Admin VEXALYN STORE, saya ingin memesan server.\n\n` +
-                            `*Paket:* ${plan.name}\n` +
-                            `*Spesifikasi:* RAM ${plan.ram} | Disk ${plan.disk} | CPU ${plan.cpu}\n` +
-                            `*Harga:* Rp ${plan.price}\n\n` +
-                            `Mohon info pembayaran. Terima kasih.`;
+            // Set harga di modal
+            document.getElementById('qrisPriceDisplay').textContent = "Rp " + plan.price;
+            
+            // Tampilkan modal
+            document.getElementById('qrisModal').classList.add('active');
+        }
+
+        // Tombol "Chat Admin Sekarang" setelah scan QRIS
+        function chatAdminAfterQris() {
+            const index = packageSelect.value;
+            const plan = plans[index];
+            
+            // Pesan khusus konfirmasi pembayaran QRIS
+            const message = `Halo Admin, saya sudah melakukan pembayaran via QRIS untuk pesanan server berikut:\n\n*Paket:* ${plan.name}\n*Total Bayar:* Rp ${plan.price}\n\nMohon segera diproses. Terima kasih.`;
             
             const encoded = encodeURIComponent(message);
             const url = `https://wa.me/6283898980808?text=${encoded}`;
             
+            // Tutup modal dan buka WhatsApp
+            document.getElementById('qrisModal').classList.remove('active');
             window.open(url, '_blank');
-        });
+        }
 
         // --- SCROLL & NAV LOGIC ---
         function scrollToSection(id) {
@@ -1211,10 +1468,8 @@
                 header.classList.remove('scrolled');
             }
             
-            // Active Link Highlighter
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.nav-link');
-            
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
@@ -1251,8 +1506,6 @@
             btn.addEventListener('click', () => {
                 const item = btn.parentElement;
                 const answer = item.querySelector('.faq-answer');
-                
-                // Close others
                 document.querySelectorAll('.faq-item').forEach(otherItem => {
                     if (otherItem !== item) {
                         otherItem.classList.remove('active');
@@ -1260,8 +1513,6 @@
                         otherItem.querySelector('.faq-answer').classList.remove('open');
                     }
                 });
-
-                // Toggle current
                 item.classList.toggle('active');
                 if (item.classList.contains('active')) {
                     answer.style.maxHeight = answer.scrollHeight + "px";
@@ -1277,12 +1528,39 @@
         function initSlider() {
             const track = document.getElementById('sliderTrack');
             let index = 0;
-            
             setInterval(() => {
                 index = (index + 1) % 3;
                 track.style.transform = `translateX(-${index * 100}%)`;
             }, 4000);
         }
+
+        // --- PWA INSTALL LOGIC ---
+        function initPWA() {
+            let deferredPrompt;
+            const installBtn = document.getElementById('installBtn');
+
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                installBtn.style.display = 'inline-flex';
+            });
+
+            installBtn.addEventListener('click', async () => {
+                if (deferredPrompt) {
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    console.log(`User response: ${outcome}`);
+                    deferredPrompt = null;
+                    installBtn.style.display = 'none';
+                }
+            });
+
+            window.addEventListener('appinstalled', () => {
+                installBtn.style.display = 'none';
+                deferredPrompt = null;
+                console.log('PWA was installed');
+            });
+        }
     </script>
 </body>
-</html>
+        </html>
